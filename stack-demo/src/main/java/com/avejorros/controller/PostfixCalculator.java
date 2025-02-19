@@ -24,7 +24,7 @@ public class PostfixCalculator implements IPostfixCalculator {
     return stack.pop();
   }
 
-  private boolean isNumber(String token) {
+  public boolean isNumber(String token) {
     try {
       Integer.parseInt(token);
       return true;
@@ -33,7 +33,7 @@ public class PostfixCalculator implements IPostfixCalculator {
     }
   }
 
-  private int applyOperation(String operator, int operand1, int operand2) {
+  public int applyOperation(String operator, int operand1, int operand2) {
     switch (operator) {
       case "+":
         return operand1 + operand2;
